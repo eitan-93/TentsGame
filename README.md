@@ -15,12 +15,12 @@ Main             |  Settings         |  Game screen          |  About the app   
 
 In this puzzle, one is given an n × n grid with initial markings (referred to as 'trees') and is tasked with placing a different type of markings (referred to as 'tents'), under several rules.
 We tackled the problem in our project with two main approaches:<br />
-          <br />SAT<br />
+          <br />**SAT**<br />
              We define a CNF expression for an instance of the problem with the help of an article,<br /><br />
                 *SAT Encodings of the AT-Most-k Constraint : Some Old, Some New, Some Fast, Some Slow. / Frisch, Alan M.;
                  Giannaros, Paul A.2010.*<br /><br />
              whose solution describes a legal solution to the instance, and solve it using the SAT4J solver.<br /><br />
-          ILP<br />
+          **ILP**<br />
              We construct a system of linear integer inequalities describing the
              constraints of an instance, whose solution yields a legal solution for the instance, 
              and solve it using the google ortools package.<br />
