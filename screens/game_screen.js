@@ -446,7 +446,7 @@ export default class GameScreen extends React.Component {
                                 var d = new Date()
 
                                 SaveGame(this.state.name,
-                                        (d.getHours().toString()+ ":" + d.getMinutes().toString()+" "+ d.getDay().toString() + "/" + d.getMonth().toString() + "/" + d.getFullYear().toString()),
+                                        (d.getHours().toString()+ ":" + d.getMinutes().toString()+" "+ d.getDate().toString() + "/" + d.getMonth().toString() + "/" + d.getFullYear().toString()),
                                         this.state.size,
                                         this.state.density,
                                         SaveBoard,
