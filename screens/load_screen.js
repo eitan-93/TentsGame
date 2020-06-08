@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, Dimensions, ImageBackground, TouchableOpacity } from 'react-native';
+import {Alert, StyleSheet, Text, View, Dimensions, ImageBackground, TouchableOpacity } from 'react-native';
 import Leaderboard from 'react-native-leaderboard';
 import AsyncStorage from '@react-native-community/async-storage';
 
@@ -63,10 +63,11 @@ const SaveGame = async (name,date,size,density,Board,tentCount,solvedBoard,horiz
         const saved = JSON.stringify(SavedGames)
         await AsyncStorage.removeItem("SavedList")
         await AsyncStorage.setItem("SavedList", saved)
-        
+        Alert.alert('Saved successfully!');
     }
     catch(error){
         console.log("-------SaveGame has a problem" + error)
+        Alert.alert('error: Saved Unsuccessfully');
     }
 }
 
