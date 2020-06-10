@@ -143,6 +143,18 @@ LoadGame = async (key) => {
     } 
     
     componentDidMount(){
+        this.props.navigation.addListener(
+            'didFocus',
+            () => {
+                LoadSavedList()
+                .then(() => {
+                    this.setState({
+                        data : SavedGames
+                    })
+                })
+            }
+          );
+
         LoadSavedList()
         .then(() => {
             this.setState({
