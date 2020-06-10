@@ -171,7 +171,7 @@ export default class GameScreen extends React.Component {
         console.log("in getCorrectTents, tentcount : "+tentCount) 
 
         if((this.state.numOfTents === tentCount)){
-            this.setState({win : true })
+            this.setState({win : true ,Board : SaveBoard })
 
             if(!this.state.didUpdate){
                 this.setState({didUpdate : true})
